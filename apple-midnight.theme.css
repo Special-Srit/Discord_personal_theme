@@ -235,6 +235,7 @@ strong {
 [class*="messageListItem"]:not(:hover) [class*="buttonContainer-"] {
   opacity: 0;
   pointer-events: none;
+  transition: opacity 0.12s ease;
 }
 
 /* On hover: stagger each action button */
