@@ -549,14 +549,8 @@ nav[aria-label="Servers sidebar"] [class*="selected-"] [class*="pill-"] span {
   box-shadow: 0 0 12px var(--accent-glow);
 }
 
-/* Mentions */
-[class*="mention-"],
-[class*="mentioned-"] {
-  background:  var(--accent-dim) !important;
-  border-left: 2px solid var(--accent-border) !important;
-}
-
-[class*="mention-"] [class*="username-"],
+/* Mentions — Midnight handles bg/fg via --mention-bg and --mention-fg variables above.
+   Only override the inline @mention chip text color and role colors here. */
 [class*="roleColor-"] { /* intentional: unifies all role colours to accent lavender */
   color: var(--accent) !important;
 }
