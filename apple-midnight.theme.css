@@ -434,3 +434,37 @@ nav[aria-label="Servers sidebar"] [class*="selected-"] [class*="pill-"] span {
   animation:        am-modalOpen 0.35s cubic-bezier(0.34, 1.4, 0.64, 1) forwards;
   transform-origin: center top;
 }
+
+/* ─── ANIMATION: VOICE SPEAKING RING ─────────────────────────────── */
+
+@keyframes am-speakRing {
+  from { transform: scale(1);   opacity: 0.5; }
+  to   { transform: scale(1.6); opacity: 0; }
+}
+
+[class*="speaking-"] [class*="avatar-"],
+[class*="voiceUser-"][class*="speaking"] [class*="avatar-"],
+[class*="participant-"][class*="speaking"] [class*="avatar-"] {
+  position: relative;
+}
+
+[class*="speaking-"] [class*="avatar-"]::before,
+[class*="speaking-"] [class*="avatar-"]::after,
+[class*="voiceUser-"][class*="speaking"] [class*="avatar-"]::before,
+[class*="voiceUser-"][class*="speaking"] [class*="avatar-"]::after,
+[class*="participant-"][class*="speaking"] [class*="avatar-"]::before,
+[class*="participant-"][class*="speaking"] [class*="avatar-"]::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: 50%;
+  border: 2px solid rgba(196, 181, 253, 0.5);
+  animation: am-speakRing 1s ease-out infinite;
+  pointer-events: none;
+}
+
+[class*="speaking-"] [class*="avatar-"]::after,
+[class*="voiceUser-"][class*="speaking"] [class*="avatar-"]::after,
+[class*="participant-"][class*="speaking"] [class*="avatar-"]::after {
+  animation-delay: 0.2s;
+}
