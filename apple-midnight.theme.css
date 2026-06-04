@@ -13,10 +13,10 @@
 /* Local dev: relative paths work when fonts/ is next to this file.   */
 /* After GitHub push: replace ./fonts/ with the raw.githubusercontent  */
 /* URL: https://raw.githubusercontent.com/<user>/apple-midnight/main/fonts/ */
-@font-face { font-family: 'Paperlogy'; font-weight: 400; src: url('./fonts/Paperlogy-4Regular.ttf'); }
-@font-face { font-family: 'Paperlogy'; font-weight: 500; src: url('./fonts/Paperlogy-5Medium.ttf'); }
-@font-face { font-family: 'Paperlogy'; font-weight: 600; src: url('./fonts/Paperlogy-6SemiBold.ttf'); }
-@font-face { font-family: 'Paperlogy'; font-weight: 700; src: url('./fonts/Paperlogy-7Bold.ttf'); }
+@font-face { font-family: 'Paperlogy'; font-style: normal; font-weight: 400; font-display: swap; src: url('./fonts/Paperlogy-4Regular.ttf'); }
+@font-face { font-family: 'Paperlogy'; font-style: normal; font-weight: 500; font-display: swap; src: url('./fonts/Paperlogy-5Medium.ttf'); }
+@font-face { font-family: 'Paperlogy'; font-style: normal; font-weight: 600; font-display: swap; src: url('./fonts/Paperlogy-6SemiBold.ttf'); }
+@font-face { font-family: 'Paperlogy'; font-style: normal; font-weight: 700; font-display: swap; src: url('./fonts/Paperlogy-7Bold.ttf'); }
 
 /* ─── COLOR TOKENS ────────────────────────────────────────────────── */
 :root {
@@ -36,7 +36,6 @@
 
   /* Borders */
   --border:            rgba(255, 255, 255, 0.10);
-  --border-1:          rgba(255, 255, 255, 0.10);
   --border-2:          rgba(255, 255, 255, 0.07);
   --border-3:          rgba(255, 255, 255, 0.04);
 
