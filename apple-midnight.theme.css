@@ -65,15 +65,24 @@
 
 /* ─── APP BASE + ANIMATED BACKGROUND ──────────────────────────────── */
 
-/* Dark base — literal color to bypass variable cascade issue */
-body {
+/* Dark base on html — JS never touches <html>, survives channel load */
+html {
   background: #08080A !important;
 }
 
-/* App mount: transparent so body shows through, position for blob children */
+/* Body and app-mount: transparent so html base + blobs show through */
+body {
+  background: transparent !important;
+}
+
 #app-mount {
   background: transparent !important;
   position: relative;
+}
+
+/* Discord dynamically applies theme colors to this class on channel switch — clear it */
+[class*="themedBackground"] {
+  background: transparent !important;
 }
 
 /* Blobs on #app-mount — behind all panels (z-index 0), panels at z-index 1 */
