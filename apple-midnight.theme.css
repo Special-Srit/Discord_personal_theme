@@ -1,22 +1,19 @@
 /**
  * @name        Apple Midnight
  * @description Dark monochrome glassmorphism theme. Apple-inspired, soft lavender accent, animated background.
- * @author      your-name
+ * @author      Special-Srit
  * @version     1.0.0
- * @source      https://github.com/your-username/apple-midnight
+ * @source      https://github.com/Special-Srit/Discord_personal_theme
  */
 
 /* ─── BASE THEME ──────────────────────────────────────────────────── */
 @import url('https://refact0r.github.io/midnight-discord/build/midnight.css');
 
 /* ─── FONTS ───────────────────────────────────────────────────────── */
-/* Local dev: relative paths work when fonts/ is next to this file.   */
-/* After GitHub push: replace ./fonts/ with the raw.githubusercontent  */
-/* URL: https://raw.githubusercontent.com/<user>/apple-midnight/main/fonts/ */
-@font-face { font-family: 'Paperlogy'; font-style: normal; font-weight: 400; font-display: swap; src: url('./fonts/Paperlogy-4Regular.ttf'); }
-@font-face { font-family: 'Paperlogy'; font-style: normal; font-weight: 500; font-display: swap; src: url('./fonts/Paperlogy-5Medium.ttf'); }
-@font-face { font-family: 'Paperlogy'; font-style: normal; font-weight: 600; font-display: swap; src: url('./fonts/Paperlogy-6SemiBold.ttf'); }
-@font-face { font-family: 'Paperlogy'; font-style: normal; font-weight: 700; font-display: swap; src: url('./fonts/Paperlogy-7Bold.ttf'); }
+@font-face { font-family: 'Paperlogy'; font-style: normal; font-weight: 400; font-display: swap; src: url('https://raw.githubusercontent.com/Special-Srit/Discord_personal_theme/main/fonts/Paperlogy-4Regular.ttf'); }
+@font-face { font-family: 'Paperlogy'; font-style: normal; font-weight: 500; font-display: swap; src: url('https://raw.githubusercontent.com/Special-Srit/Discord_personal_theme/main/fonts/Paperlogy-5Medium.ttf'); }
+@font-face { font-family: 'Paperlogy'; font-style: normal; font-weight: 600; font-display: swap; src: url('https://raw.githubusercontent.com/Special-Srit/Discord_personal_theme/main/fonts/Paperlogy-6SemiBold.ttf'); }
+@font-face { font-family: 'Paperlogy'; font-style: normal; font-weight: 700; font-display: swap; src: url('https://raw.githubusercontent.com/Special-Srit/Discord_personal_theme/main/fonts/Paperlogy-7Bold.ttf'); }
 
 /* ─── COLOR TOKENS ────────────────────────────────────────────────── */
 :root {
