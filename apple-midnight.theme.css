@@ -162,6 +162,13 @@ nav[aria-label*="channel"],
   font-family: 'Paperlogy', -apple-system, BlinkMacSystemFont, sans-serif !important;
 }
 
+/* Restore monospace for code blocks */
+code, pre,
+[class*="codeBlock-"],
+[class*="markup-"] code {
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace !important;
+}
+
 /* Message body text — Regular */
 [class*="markup-"],
 [class*="messageContent"],
