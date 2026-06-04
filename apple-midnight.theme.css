@@ -101,10 +101,12 @@ body::after {
 /* ─── GLASS PANELS ────────────────────────────────────────────────── */
 
 /* z-index: 1 ensures panels sit in front of the body blob layer (z-index: 0) */
+/* NOTE: background uses !important to override Midnight. Descendant background rules must also use !important or higher specificity. */
 
 /* Server list */
 nav[aria-label="Servers sidebar"],
 [class*="guilds-"] {
+  background-color:         var(--bg-2);
   background:               var(--glass-srv) !important;
   backdrop-filter:          blur(40px) saturate(1.4);
   -webkit-backdrop-filter:  blur(40px) saturate(1.4);
@@ -118,6 +120,7 @@ nav[aria-label="Servers sidebar"],
 /* Channel list */
 nav[aria-label*="channel"],
 [class*="sidebar-"] {
+  background-color:         var(--bg-2);
   background:               var(--glass-chs) !important;
   backdrop-filter:          blur(48px) saturate(1.4);
   -webkit-backdrop-filter:  blur(48px) saturate(1.4);
@@ -131,6 +134,7 @@ nav[aria-label*="channel"],
 /* Chat area */
 [class*="chat-"],
 [class*="chatContent"] {
+  background-color:         var(--bg-3);
   background:               var(--glass-chat) !important;
   backdrop-filter:          blur(52px) saturate(1.4);
   -webkit-backdrop-filter:  blur(52px) saturate(1.4);
@@ -141,7 +145,8 @@ nav[aria-label*="channel"],
 /* Modals, popouts, context menus */
 [class*="modal-"][class*="root"],
 [class*="popout-"][class*="root"],
-[class*="menu-"] {
+[class*="menu-"][role="menu"] {
+  background-color:         var(--bg-3);
   background:               var(--glass-modal) !important;
   backdrop-filter:          blur(60px) saturate(1.5);
   -webkit-backdrop-filter:  blur(60px) saturate(1.5);
