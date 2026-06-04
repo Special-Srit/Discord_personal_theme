@@ -1,0 +1,9 @@
+# Brainstorm artifacts from visual companion
+.superpowers/
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+
+# Original font archive — individual files in fonts/ are tracked separately
+Paperlogy-1.001/
