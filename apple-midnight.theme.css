@@ -1,1 +1,59 @@
-/* apple-midnight.theme.css */
+/**
+ * @name        Apple Midnight
+ * @description Dark monochrome glassmorphism theme. Apple-inspired, soft lavender accent, animated background.
+ * @author      your-name
+ * @version     1.0.0
+ * @source      https://github.com/your-username/apple-midnight
+ */
+
+/* ─── BASE THEME ──────────────────────────────────────────────────── */
+@import url('https://refact0r.github.io/midnight-discord/build/midnight.css');
+
+/* ─── FONTS ───────────────────────────────────────────────────────── */
+/* Local dev: relative paths work when fonts/ is next to this file.   */
+/* After GitHub push: replace ./fonts/ with the raw.githubusercontent  */
+/* URL: https://raw.githubusercontent.com/<user>/apple-midnight/main/fonts/ */
+@font-face { font-family: 'Paperlogy'; font-weight: 400; src: url('./fonts/Paperlogy-4Regular.ttf'); }
+@font-face { font-family: 'Paperlogy'; font-weight: 500; src: url('./fonts/Paperlogy-5Medium.ttf'); }
+@font-face { font-family: 'Paperlogy'; font-weight: 600; src: url('./fonts/Paperlogy-6SemiBold.ttf'); }
+@font-face { font-family: 'Paperlogy'; font-weight: 700; src: url('./fonts/Paperlogy-7Bold.ttf'); }
+
+/* ─── COLOR TOKENS ────────────────────────────────────────────────── */
+:root {
+  /* Backgrounds — Apple HIG dark mode scale */
+  --bg-1:              #08080A;
+  --bg-2:              #111114;
+  --bg-3:              #1C1C1F;
+  --bg-4:              #242428;
+  --divider:           #38383A;
+
+  /* Text */
+  --text-1:            #F2F2F7;
+  --text-2:            #AEAEB2;
+  --text-3:            #636366;
+  --text-4:            #48484A;
+  --text-5:            #3A3A3C;
+
+  /* Borders */
+  --border:            rgba(255, 255, 255, 0.10);
+  --border-1:          rgba(255, 255, 255, 0.10);
+  --border-2:          rgba(255, 255, 255, 0.07);
+  --border-3:          rgba(255, 255, 255, 0.04);
+
+  /* Glass surface tints — used by panel rules in Task 4 */
+  --glass-srv:         rgba(255, 255, 255, 0.12);
+  --glass-chs:         rgba(255, 255, 255, 0.10);
+  --glass-chat:        rgba(255, 255, 255, 0.06);
+  --glass-modal:       rgba(255, 255, 255, 0.14);
+
+  /* Accent — Tailwind violet-300 / soft lavender */
+  --accent:            #C4B5FD;
+  --accent-dim:        rgba(196, 181, 253, 0.13);
+  --accent-border:     rgba(196, 181, 253, 0.40);
+  --accent-glow:       rgba(196, 181, 253, 0.08);
+
+  /* Midnight variable overrides — maps our accent into Midnight's token names */
+  --mention-bg:        rgba(196, 181, 253, 0.13);
+  --mention-fg:        #C4B5FD;
+  --mention-bg-hover:  rgba(196, 181, 253, 0.20);
+}
