@@ -20,7 +20,7 @@ A dark, Apple/macOS-inspired Discord theme for Vencord. Features heavy glassmorp
 1. Open Discord → Settings → Vencord → QuickCSS
 2. Paste the contents of `apple-midnight.theme.css`
 
-> **Font note:** The `fonts/` folder must be present next to the CSS file for Paperlogy to load. Copy `fonts/` into the Vencord themes directory alongside the CSS file.
+> **Note:** Fonts will not load with this method unless you have already replaced `@font-face` paths with raw GitHub URLs (see "After Pushing to GitHub" below).
 
 ## After Pushing to GitHub
 
