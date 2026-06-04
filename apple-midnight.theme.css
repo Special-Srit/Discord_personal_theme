@@ -222,3 +222,36 @@ strong {
   clip-path: inset(0 100% 0 0);
   animation: am-msgTextReveal 0.45s ease-out 0.18s forwards;
 }
+
+/* ─── ANIMATION: MESSAGE HOVER ACTIONS ────────────────────────────── */
+
+@keyframes am-actionFadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Hidden until parent is hovered */
+[class*="message-"]:not(:hover) [class*="buttonContainer-"],
+[class*="messageListItem"]:not(:hover) [class*="buttonContainer-"] {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* On hover: stagger each action button */
+[class*="message-"]:hover [class*="buttonContainer-"] > *:nth-child(1),
+[class*="messageListItem"]:hover [class*="buttonContainer-"] > *:nth-child(1) {
+  animation: am-actionFadeIn 0.18s ease forwards;
+  animation-delay: 0.05s;
+}
+
+[class*="message-"]:hover [class*="buttonContainer-"] > *:nth-child(2),
+[class*="messageListItem"]:hover [class*="buttonContainer-"] > *:nth-child(2) {
+  animation: am-actionFadeIn 0.18s ease forwards;
+  animation-delay: 0.12s;
+}
+
+[class*="message-"]:hover [class*="buttonContainer-"] > *:nth-child(3),
+[class*="messageListItem"]:hover [class*="buttonContainer-"] > *:nth-child(3) {
+  animation: am-actionFadeIn 0.18s ease forwards;
+  animation-delay: 0.19s;
+}
