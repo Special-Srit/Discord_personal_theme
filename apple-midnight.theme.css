@@ -445,7 +445,7 @@ nav[aria-label="Servers sidebar"] [class*="selected-"] [class*="pill-"] span {
 [class*="speaking-"] [class*="avatar-"],
 [class*="voiceUser-"][class*="speaking"] [class*="avatar-"],
 [class*="participant-"][class*="speaking"] [class*="avatar-"] {
-  position: relative;
+  position: relative; /* verify this doesn't displace avatars in live voice panel */
 }
 
 [class*="speaking-"] [class*="avatar-"]::before,
@@ -461,6 +461,7 @@ nav[aria-label="Servers sidebar"] [class*="selected-"] [class*="pill-"] span {
   border: 2px solid rgba(196, 181, 253, 0.5);
   animation: am-speakRing 1s ease-out infinite;
   pointer-events: none;
+  /* If rings are clipped: add overflow: visible to the speaking avatar's parent container */
 }
 
 [class*="speaking-"] [class*="avatar-"]::after,
