@@ -469,3 +469,72 @@ nav[aria-label="Servers sidebar"] [class*="selected-"] [class*="pill-"] span {
 [class*="participant-"][class*="speaking"] [class*="avatar-"]::after {
   animation-delay: 0.2s;
 }
+
+/* ─── ACCENT COLOR TARGETS ────────────────────────────────────────── */
+
+/* Active/selected channel */
+[class*="channel-"][class*="selected-"],
+[class*="channel-"][class*="active-"],
+[class*="channel-"][class*="link-"][class*="selected"] {
+  background:  var(--accent-dim) !important;
+  border-left: 2px solid var(--accent-border) !important;
+  color:        var(--text-1) !important;
+}
+
+/* Unread channel dot */
+[class*="unread-"][class*="bar"],
+[class*="unread-"][class*="dot"] {
+  background: var(--accent) !important;
+}
+
+/* Message input — accent border on focus */
+[class*="textArea-"]:focus-within,
+[class*="textAreaSlate-"]:focus-within,
+[class*="channelTextArea-"]:focus-within {
+  border-color: var(--accent-border) !important;
+  box-shadow:   0 0 0 1px var(--accent-glow) !important;
+}
+
+/* Send button */
+[class*="sendButton-"],
+[class*="button-"][aria-label="Send Message"] {
+  color:       var(--accent) !important;
+  background:  var(--accent-dim) !important;
+  border:      1px solid var(--accent-border) !important;
+  transition:  background 0.2s ease, box-shadow 0.2s ease;
+}
+
+[class*="sendButton-"]:hover,
+[class*="button-"][aria-label="Send Message"]:hover {
+  background: rgba(196, 181, 253, 0.22) !important;
+  box-shadow: 0 0 12px var(--accent-glow);
+}
+
+/* Mentions */
+[class*="mention-"],
+[class*="mentioned-"] {
+  background:  var(--accent-dim) !important;
+  border-left: 2px solid var(--accent-border) !important;
+}
+
+[class*="mention-"] [class*="username-"],
+[class*="roleColor-"] {
+  color: var(--accent) !important;
+}
+
+/* Text selection */
+::selection {
+  background: rgba(196, 181, 253, 0.25);
+  color:       var(--text-1);
+}
+
+/* Links */
+a,
+[class*="anchor-"] {
+  color: var(--accent) !important;
+}
+
+a:hover,
+[class*="anchor-"]:hover {
+  color: #DDD6FE !important;
+}
