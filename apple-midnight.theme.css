@@ -10,10 +10,10 @@
 @import url('https://refact0r.github.io/midnight-discord/build/midnight.css');
 
 /* ─── FONTS ───────────────────────────────────────────────────────── */
-@font-face { font-family: 'Paperlogy'; font-style: normal; font-weight: 400; font-display: swap; src: url('https://raw.githubusercontent.com/Special-Srit/Discord_personal_theme/main/fonts/Paperlogy-4Regular.ttf'); }
-@font-face { font-family: 'Paperlogy'; font-style: normal; font-weight: 500; font-display: swap; src: url('https://raw.githubusercontent.com/Special-Srit/Discord_personal_theme/main/fonts/Paperlogy-5Medium.ttf'); }
-@font-face { font-family: 'Paperlogy'; font-style: normal; font-weight: 600; font-display: swap; src: url('https://raw.githubusercontent.com/Special-Srit/Discord_personal_theme/main/fonts/Paperlogy-6SemiBold.ttf'); }
-@font-face { font-family: 'Paperlogy'; font-style: normal; font-weight: 700; font-display: swap; src: url('https://raw.githubusercontent.com/Special-Srit/Discord_personal_theme/main/fonts/Paperlogy-7Bold.ttf'); }
+@font-face { font-family: 'Paperlogy'; font-style: normal; font-weight: 400; font-display: swap; src: url('https://raw.githubusercontent.com/Special-Srit/Discord_personal_theme/master/fonts/Paperlogy-4Regular.ttf'); }
+@font-face { font-family: 'Paperlogy'; font-style: normal; font-weight: 500; font-display: swap; src: url('https://raw.githubusercontent.com/Special-Srit/Discord_personal_theme/master/fonts/Paperlogy-5Medium.ttf'); }
+@font-face { font-family: 'Paperlogy'; font-style: normal; font-weight: 600; font-display: swap; src: url('https://raw.githubusercontent.com/Special-Srit/Discord_personal_theme/master/fonts/Paperlogy-6SemiBold.ttf'); }
+@font-face { font-family: 'Paperlogy'; font-style: normal; font-weight: 700; font-display: swap; src: url('https://raw.githubusercontent.com/Special-Srit/Discord_personal_theme/master/fonts/Paperlogy-7Bold.ttf'); }
 
 /* ─── COLOR TOKENS ────────────────────────────────────────────────── */
 :root {
@@ -54,7 +54,22 @@
   --mention-bg-hover:  rgba(196, 181, 253, 0.20);
 }
 
-/* ─── ANIMATED BACKGROUND ────────────────────────────────────────── */
+/* ─── APP BASE + ANIMATED BACKGROUND ──────────────────────────────── */
+
+/* Dark base — the body is the true background canvas */
+body {
+  background: var(--bg-1) !important;
+}
+
+/* Clear Discord's container stack so body blobs show through to panels */
+#app-mount,
+[class*="layers-"],
+[class*="layer-"],
+[class*="base-"] {
+  background: transparent !important;
+}
+
+/* Animated blobs — rendered on body, behind all Discord UI */
 body::before,
 body::after {
   content: '';
@@ -70,7 +85,7 @@ body::before {
   height: 600px;
   top: -150px;
   left: -100px;
-  background: rgba(196, 181, 253, 0.07);
+  background: rgba(196, 181, 253, 0.15);
   filter: blur(80px);
   animation: am-blobDrift1 16s ease-in-out infinite alternate;
 }
@@ -80,7 +95,7 @@ body::after {
   height: 500px;
   bottom: -120px;
   right: -80px;
-  background: rgba(180, 180, 210, 0.06);
+  background: rgba(180, 180, 210, 0.10);
   filter: blur(80px);
   animation: am-blobDrift2 20s ease-in-out infinite alternate;
 }
@@ -409,11 +424,15 @@ nav[aria-label="Servers sidebar"] [class*="selected-"] [class*="pill-"] span {
 }
 
 [class*="numberBadge-"],
-[class*="badge-"][class*="count"] {
-  background: var(--accent) !important;
-  color:       #1C1C1F !important;
-  font-weight: 700;
-  animation:   am-badgePulse 2s ease-in-out infinite;
+[class*="badge-"][class*="count"],
+[class*="baseLayer-"] [class*="numberBadge"],
+[class*="lowerBadge-"],
+[class*="upperBadge-"] {
+  background:       var(--accent) !important;
+  color:            #1C1C1F !important;
+  font-weight:      700;
+  animation:        am-badgePulse 2s ease-in-out infinite;
+  transform-origin: center center;
 }
 
 /* ─── ANIMATION: MODAL / POPOUT OPEN ─────────────────────────────── */
