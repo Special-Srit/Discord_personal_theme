@@ -328,3 +328,24 @@ strong {
 
 [class*="messages-"] [class*="messageListItem"]:nth-child(10),
 [class*="scroller-"] [class*="messageListItem"]:nth-child(10) { animation-delay: 0.80s; }
+
+/* ─── ANIMATION: LOADING SHIMMER ─────────────────────────────────── */
+
+@keyframes am-shimmer {
+  from { background-position: -200% center; }
+  to   { background-position:  200% center; }
+}
+
+[class*="skeleton-"],
+[class*="placeholder-"],
+[class*="ghost-"] {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.04) 0%,
+    rgba(196, 181, 253, 0.12) 50%,
+    rgba(255, 255, 255, 0.04) 100%
+  ) !important;
+  background-size: 200% 100%;
+  animation: am-shimmer 1.4s ease-in-out infinite;
+  border-radius: 4px;
+}
