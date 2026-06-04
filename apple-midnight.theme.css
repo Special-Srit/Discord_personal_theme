@@ -349,3 +349,72 @@ strong {
   animation: am-shimmer 1.4s ease-in-out infinite;
   border-radius: 4px;
 }
+
+/* ─── ANIMATION: CHANNEL HOVER SLIDE ─────────────────────────────── */
+
+[class*="channel-"][class*="link-"],
+[class*="channel-"][class*="wrapper-"] {
+  transition: background 0.2s ease, transform 0.2s ease;
+  position: relative;
+}
+
+[class*="channel-"][class*="link-"]:hover,
+[class*="channel-"][class*="wrapper-"]:hover {
+  transform: translateX(4px);
+}
+
+/* Left accent bar — slides in on hover */
+[class*="channel-"][class*="link-"]::before,
+[class*="channel-"][class*="wrapper-"]::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2px;
+  height: 0;
+  background: var(--accent);
+  border-radius: 0 2px 2px 0;
+  transition: height 0.2s ease;
+}
+
+[class*="channel-"][class*="link-"]:hover::before,
+[class*="channel-"][class*="wrapper-"]:hover::before {
+  height: 12px;
+}
+
+/* ─── ANIMATION: SERVER ICON MORPH ────────────────────────────────── */
+
+nav[aria-label="Servers sidebar"] [class*="wrapper-"] img,
+[class*="blobContainer-"] img {
+  border-radius: 50%;
+  transition: border-radius 0.25s cubic-bezier(0.34, 1.56, 0.64, 1),
+              transform     0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+nav[aria-label="Servers sidebar"] [class*="wrapper-"]:hover img,
+[class*="blobContainer-"]:hover img {
+  border-radius: 14px;
+  transform: scale(1.08);
+}
+
+/* Active server pip — lavender indicator */
+[class*="listItemWrapper-"][class*="selected"] [class*="pill-"] span,
+nav[aria-label="Servers sidebar"] [class*="selected-"] [class*="pill-"] span {
+  background: var(--accent) !important;
+}
+
+/* ─── ANIMATION: NOTIFICATION BADGE PULSE ─────────────────────────── */
+
+@keyframes am-badgePulse {
+  0%, 100% { transform: scale(1); }
+  50%       { transform: scale(1.2); }
+}
+
+[class*="numberBadge-"],
+[class*="badge-"][class*="count"] {
+  background: var(--accent) !important;
+  color:       #1C1C1F !important;
+  font-weight: 700;
+  animation:   am-badgePulse 2s ease-in-out infinite;
+}
