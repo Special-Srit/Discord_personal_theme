@@ -296,16 +296,8 @@ strong {
 }
 
 /* ─── ANIMATION: CHANNEL SWITCH STAGGER ──────────────────────────── */
-
-@keyframes am-channelSwitchIn {
-  from { opacity: 0; transform: translateY(8px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-[class*="messages-"] [class*="messageListItem"],
-[class*="scroller-"] [class*="messageListItem"] {
-  animation: am-channelSwitchIn 0.3s ease-out forwards;
-}
+/* Adds per-item delays to the message entry animation from the MESSAGE ENTRY section above. */
+/* No separate keyframe needed — delay-only rules stack on top of the existing animation. */
 
 [class*="messages-"] [class*="messageListItem"]:nth-child(1),
 [class*="scroller-"] [class*="messageListItem"]:nth-child(1)  { animation-delay: 0.08s; }
