@@ -518,7 +518,7 @@ nav[aria-label="Servers sidebar"] [class*="selected-"] [class*="pill-"] span {
 }
 
 [class*="mention-"] [class*="username-"],
-[class*="roleColor-"] {
+[class*="roleColor-"] { /* intentional: unifies all role colours to accent lavender */
   color: var(--accent) !important;
 }
 
@@ -529,12 +529,14 @@ nav[aria-label="Servers sidebar"] [class*="selected-"] [class*="pill-"] span {
 }
 
 /* Links */
-a,
+[class*="chat-"] a,
+[class*="message-"] a,
 [class*="anchor-"] {
   color: var(--accent) !important;
 }
 
-a:hover,
+[class*="chat-"] a:hover,
+[class*="message-"] a:hover,
 [class*="anchor-"]:hover {
   color: #DDD6FE !important;
 }
