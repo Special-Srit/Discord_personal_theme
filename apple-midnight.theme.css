@@ -154,3 +154,41 @@ nav[aria-label*="channel"],
   box-shadow:               inset 0 1px 0 rgba(255, 255, 255, 0.08),
                             0 8px 40px rgba(0, 0, 0, 0.50);
 }
+
+/* ─── TYPOGRAPHY ──────────────────────────────────────────────────── */
+
+/* Global — Paperlogy for the entire app */
+* {
+  font-family: 'Paperlogy', -apple-system, BlinkMacSystemFont, sans-serif !important;
+}
+
+/* Message body text — Regular */
+[class*="markup-"],
+[class*="messageContent"],
+[class*="content-"] {
+  font-weight: 400;
+}
+
+/* Channel names, UI labels, timestamps — Medium */
+[class*="channelName"],
+[class*="name-"][class*="channel"],
+[class*="timestamp-"],
+[class*="subtext-"] {
+  font-weight: 500;
+}
+
+/* Usernames, section headers — SemiBold */
+[class*="username-"],
+[class*="author-"],
+[class*="headerText-"],
+[class*="categoryHeader"],
+h1, h2, h3 {
+  font-weight: 600;
+}
+
+/* Modal titles, strong emphasis — Bold */
+[class*="title-"][class*="modal"],
+[class*="header-"][class*="modal"],
+strong {
+  font-weight: 700;
+}
