@@ -22,14 +22,14 @@
   --bg-2:              #111114 !important;
   --bg-3:              #1C1C1F !important;
   --bg-4:              #242428 !important;
-  --divider:           #38383A !important;
+  --divider:           #3A3A3E !important;
 
   /* Text — !important so Midnight doesn't override */
   --text-1:            #F2F2F7 !important;
   --text-2:            #AEAEB2 !important;
-  --text-3:            #8E8E93 !important;
-  --text-4:            #636366 !important;
-  --text-5:            #48484A !important;
+  --text-3:            #AEAEB2 !important;
+  --text-4:            #8E8E93 !important;
+  --text-5:            #636366 !important;
 
   /* Borders */
   --border:            rgba(255, 255, 255, 0.10);
@@ -218,6 +218,38 @@ nav[aria-label*="channel"],
   background:               var(--glass-chs) !important;
   backdrop-filter:          blur(48px) saturate(1.4);
   -webkit-backdrop-filter:  blur(48px) saturate(1.4);
+}
+
+/* ─── DATE SEPARATORS + TIMESTAMPS ───────────────────────────────── */
+
+/* Date divider line */
+[class*="divider-"],
+[class*="dividerContent_"],
+[class*="hasContent_"] {
+  border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+/* Date pill (e.g. "2026년 6월 5일") */
+[class*="content_"][class*="divider"],
+[class*="dividerText_"] {
+  background: rgba(255, 255, 255, 0.08) !important;
+  color:       var(--text-4) !important;
+  border:      1px solid rgba(255, 255, 255, 0.10) !important;
+  border-radius: 20px;
+  padding:     2px 8px;
+}
+
+/* Inline message timestamp */
+[class*="timestamp-"],
+[class*="timestampInline_"],
+[class*="messageTimestamp_"] {
+  color: var(--text-4) !important;
+}
+
+/* System message text (calls, joins, etc.) */
+[class*="systemMessage_"],
+[class*="content_"][class*="system"] {
+  color: var(--text-3) !important;
 }
 
 /* ─── TYPOGRAPHY ──────────────────────────────────────────────────── */
