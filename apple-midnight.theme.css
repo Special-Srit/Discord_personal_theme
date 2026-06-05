@@ -15,11 +15,11 @@
 @font-face { font-family: 'Paperlogy'; font-style: normal; font-weight: 600; font-display: swap; src: url('https://raw.githubusercontent.com/Special-Srit/Discord_personal_theme/master/fonts/Paperlogy-6SemiBold.ttf'); }
 @font-face { font-family: 'Paperlogy'; font-style: normal; font-weight: 700; font-display: swap; src: url('https://raw.githubusercontent.com/Special-Srit/Discord_personal_theme/master/fonts/Paperlogy-7Bold.ttf'); }
 
-/* Pretendard — Korean fallback (only activates for Hangul codepoints Paperlogy doesn't cover) */
-@font-face { font-family: 'Pretendard'; font-style: normal; font-weight: 400; font-display: swap; unicode-range: U+AC00-D7A3, U+1100-11FF, U+3130-318F, U+A960-A97F, U+D7B0-D7FF; src: url('https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/static/woff2/Pretendard-Regular.woff2') format('woff2'); }
-@font-face { font-family: 'Pretendard'; font-style: normal; font-weight: 500; font-display: swap; unicode-range: U+AC00-D7A3, U+1100-11FF, U+3130-318F, U+A960-A97F, U+D7B0-D7FF; src: url('https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/static/woff2/Pretendard-Medium.woff2') format('woff2'); }
-@font-face { font-family: 'Pretendard'; font-style: normal; font-weight: 600; font-display: swap; unicode-range: U+AC00-D7A3, U+1100-11FF, U+3130-318F, U+A960-A97F, U+D7B0-D7FF; src: url('https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/static/woff2/Pretendard-SemiBold.woff2') format('woff2'); }
-@font-face { font-family: 'Pretendard'; font-style: normal; font-weight: 700; font-display: swap; unicode-range: U+AC00-D7A3, U+1100-11FF, U+3130-318F, U+A960-A97F, U+D7B0-D7FF; src: url('https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/static/woff2/Pretendard-Bold.woff2') format('woff2'); }
+/* Pretendard — fallback for any glyph Paperlogy doesn't have (no unicode-range restriction) */
+@font-face { font-family: 'Pretendard'; font-style: normal; font-weight: 400; font-display: swap; src: url('https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/static/woff2/Pretendard-Regular.woff2') format('woff2'); }
+@font-face { font-family: 'Pretendard'; font-style: normal; font-weight: 500; font-display: swap; src: url('https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/static/woff2/Pretendard-Medium.woff2') format('woff2'); }
+@font-face { font-family: 'Pretendard'; font-style: normal; font-weight: 600; font-display: swap; src: url('https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/static/woff2/Pretendard-SemiBold.woff2') format('woff2'); }
+@font-face { font-family: 'Pretendard'; font-style: normal; font-weight: 700; font-display: swap; src: url('https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/static/woff2/Pretendard-Bold.woff2') format('woff2'); }
 
 /* ─── COLOR TOKENS ────────────────────────────────────────────────── */
 :root {
