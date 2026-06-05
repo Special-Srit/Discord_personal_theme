@@ -27,9 +27,9 @@
   /* Text — !important so Midnight doesn't override */
   --text-1:            #F2F2F7 !important;
   --text-2:            #AEAEB2 !important;
-  --text-3:            #636366 !important;
-  --text-4:            #48484A !important;
-  --text-5:            #3A3A3C !important;
+  --text-3:            #8E8E93 !important;
+  --text-4:            #636366 !important;
+  --text-5:            #48484A !important;
 
   /* Borders */
   --border:            rgba(255, 255, 255, 0.10);
