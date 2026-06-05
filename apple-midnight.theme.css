@@ -361,47 +361,35 @@ strong {
   30%            { transform: translateY(-5px); }
 }
 
-/* Typing indicator wrapper — keep it transparent, only pill the inner text */
-[class*="typing-"] {
-  background:  transparent !important;
-  border:      none !important;
-  padding:     0 !important;
-  width:       auto !important;
+/* Discord's typing indicator is now the aria announcer element (class: announcer_*).
+   Keep it clean — just tint the text lavender, no glass that breaks layout. */
+[class*="announcer_"] {
+  color:      var(--text-3) !important;
+  background: transparent !important;
+  border:     none !important;
 }
 
-/* Glass pill — target the inner text/dots container specifically */
-[class*="typingIndicator-"],
-[class*="typingDots-"],
-[class*="typing_"] {
-  background:               rgba(255, 255, 255, 0.08) !important;
-  backdrop-filter:          blur(20px);
-  -webkit-backdrop-filter:  blur(20px);
-  border:                   1px solid var(--border-2) !important;
-  border-radius:            20px !important;
-  padding:                  3px 10px !important;
-  width:                    fit-content !important;
-  display:                  inline-flex !important;
-  align-items:              center;
-  gap:                      4px;
-}
-
-/* Lavender dots */
-[class*="typing-"] [class*="dot-"] {
+/* Lavender dots — target dot elements inside any typing-related container */
+[class*="typing-"] [class*="dot-"],
+[class*="announcer_"] [class*="dot-"] {
   background-color: var(--accent) !important;
   border-radius:    50%;
 }
 
-/* Staggered bounce */
-[class*="typing-"] [class*="dot-"]:nth-child(1) {
+/* Staggered bounce on dots */
+[class*="typing-"] [class*="dot-"]:nth-child(1),
+[class*="announcer_"] [class*="dot-"]:nth-child(1) {
   animation: am-typingBounce 1s ease-in-out infinite;
 }
 
-[class*="typing-"] [class*="dot-"]:nth-child(2) {
+[class*="typing-"] [class*="dot-"]:nth-child(2),
+[class*="announcer_"] [class*="dot-"]:nth-child(2) {
   animation: am-typingBounce 1s ease-in-out infinite;
   animation-delay: 0.2s;
 }
 
-[class*="typing-"] [class*="dot-"]:nth-child(3) {
+[class*="typing-"] [class*="dot-"]:nth-child(3),
+[class*="announcer_"] [class*="dot-"]:nth-child(3) {
   animation: am-typingBounce 1s ease-in-out infinite;
   animation-delay: 0.4s;
 }
