@@ -59,7 +59,7 @@
   --active:      rgba(196, 181, 253, 0.13) !important;
   --selected:    rgba(196, 181, 253, 0.13) !important;
   --mention:     #C4B5FD !important;
-  --mention-bg:  rgba(196, 181, 253, 0.13) !important;
+  --mention-bg:  rgba(196, 181, 253, 0.07) !important;
   --link:        #C4B5FD !important;
 }
 
@@ -549,8 +549,13 @@ nav[aria-label="Servers sidebar"] [class*="selected-"] [class*="pill-"] span {
   box-shadow: 0 0 12px var(--accent-glow);
 }
 
-/* Mentions — Midnight handles bg/fg via --mention-bg and --mention-fg variables above.
-   Only override the inline @mention chip text color and role colors here. */
+/* Mentions — force subtle background using Discord's _hash class pattern */
+/* This wins even if Midnight applies --accent-1 (solid) to mention rows */
+[class*="mentioned_"] {
+  background-color: rgba(196, 181, 253, 0.07) !important;
+  border-left-color: rgba(196, 181, 253, 0.40) !important;
+}
+
 [class*="roleColor-"] { /* intentional: unifies all role colours to accent lavender */
   color: var(--accent) !important;
 }
