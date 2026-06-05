@@ -361,14 +361,28 @@ strong {
   30%            { transform: translateY(-5px); }
 }
 
-/* Glass pill container */
+/* Typing indicator wrapper — keep it transparent, only pill the inner text */
 [class*="typing-"] {
+  background:  transparent !important;
+  border:      none !important;
+  padding:     0 !important;
+  width:       auto !important;
+}
+
+/* Glass pill — target the inner text/dots container specifically */
+[class*="typingIndicator-"],
+[class*="typingDots-"],
+[class*="typing_"] {
   background:               rgba(255, 255, 255, 0.08) !important;
   backdrop-filter:          blur(20px);
   -webkit-backdrop-filter:  blur(20px);
-  border:                   1px solid var(--border-2);
-  border-radius:            20px;
-  padding:                  4px 10px;
+  border:                   1px solid var(--border-2) !important;
+  border-radius:            20px !important;
+  padding:                  3px 10px !important;
+  width:                    fit-content !important;
+  display:                  inline-flex !important;
+  align-items:              center;
+  gap:                      4px;
 }
 
 /* Lavender dots */
